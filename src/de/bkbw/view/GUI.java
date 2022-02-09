@@ -64,23 +64,25 @@ public class GUI extends JFrame {
 		View_Login.add(txtPassword);
 		
 		JLabel lblEmail = new JLabel("E-Mail\r\n");
-		lblEmail.setFont(new Font("Arial", Font.PLAIN, 16));
+		lblEmail.setFont(new Font("Times New Roman", Font.PLAIN, 16));
 		lblEmail.setHorizontalAlignment(SwingConstants.LEFT);
 		lblEmail.setBounds(114, 34, 190, 23);
 		View_Login.add(lblEmail);
 		
 		JLabel lblPassword = new JLabel("Passwort");
-		lblPassword.setFont(new Font("Arial", Font.PLAIN, 16));
+		lblPassword.setFont(new Font("Times New Roman", Font.PLAIN, 16));
 		lblPassword.setBounds(114, 103, 190, 23);
 		View_Login.add(lblPassword);
 		
 		JButton btnLogin = new JButton("Einloggen");
+		btnLogin.setFont(new Font("Times New Roman", Font.PLAIN, 11));
 		btnLogin.setBackground(Color.LIGHT_GRAY);
 		btnLogin.setForeground(Color.BLACK);
 		btnLogin.setBounds(114, 169, 120, 23);
 		View_Login.add(btnLogin);
 		
 		JButton btnRegister = new JButton("Registrieren");
+		btnRegister.setFont(new Font("Times New Roman", Font.PLAIN, 11));
 		btnRegister.setBackground(Color.LIGHT_GRAY);
 		btnRegister.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
