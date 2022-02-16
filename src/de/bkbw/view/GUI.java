@@ -1,19 +1,19 @@
 package de.bkbw.view;
 
-import java.awt.Color;
 import java.awt.EventQueue;
-import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JPasswordField;
-import javax.swing.JTextField;
-import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JTextField;
+import javax.swing.JPasswordField;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import java.awt.Color;
+import javax.swing.SwingConstants;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Font;
 
 public class GUI extends JFrame {
 
@@ -21,8 +21,7 @@ public class GUI extends JFrame {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private JPanel loginPanel;
-	private JPanel registerPanel;
+	private JPanel View_Login;
 	private JTextField txtEmail;
 	private JPasswordField txtPassword;
 
@@ -49,114 +48,47 @@ public class GUI extends JFrame {
 		setTitle("Ticketverwaltungssystem");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 464, 319);
-		viewLogin();
-		//viewRegister();	
-	}
-	
-	private void viewLogin() {
-		loginPanel = new JPanel();
-		loginPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(loginPanel);
-		loginPanel.setLayout(null);
+		View_Login = new JPanel();
+		View_Login.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(View_Login);
+		View_Login.setLayout(null);
 		
 		txtEmail = new JTextField();
-		txtEmail.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 13));
 		txtEmail.setHorizontalAlignment(SwingConstants.LEFT);
 		txtEmail.setBounds(114, 59, 250, 33);
-		txtEmail.setBorder(new EmptyBorder(0, 0, 0, 0));
-		loginPanel.add(txtEmail);
+		View_Login.add(txtEmail);
 		txtEmail.setColumns(10);
 		
 		txtPassword = new JPasswordField();
-		txtPassword.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 13));
 		txtPassword.setBounds(114, 128, 250, 30);
-		txtPassword.setBorder(new EmptyBorder(0, 0, 0, 0));
-		loginPanel.add(txtPassword);
+		View_Login.add(txtPassword);
 		
 		JLabel lblEmail = new JLabel("E-Mail\r\n");
-		lblEmail.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 13));
+		lblEmail.setFont(new Font("Times New Roman", Font.PLAIN, 16));
 		lblEmail.setHorizontalAlignment(SwingConstants.LEFT);
 		lblEmail.setBounds(114, 34, 190, 23);
-		loginPanel.add(lblEmail);
+		View_Login.add(lblEmail);
 		
 		JLabel lblPassword = new JLabel("Passwort");
-		lblPassword.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 13));
+		lblPassword.setFont(new Font("Times New Roman", Font.PLAIN, 16));
 		lblPassword.setBounds(114, 103, 190, 23);
-		loginPanel.add(lblPassword);
+		View_Login.add(lblPassword);
 		
 		JButton btnLogin = new JButton("Einloggen");
-		btnLogin.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 11));
+		btnLogin.setFont(new Font("Times New Roman", Font.PLAIN, 11));
 		btnLogin.setBackground(Color.LIGHT_GRAY);
 		btnLogin.setForeground(Color.BLACK);
 		btnLogin.setBounds(114, 169, 120, 23);
-		btnLogin.setBorder(new EmptyBorder(0, 0, 0, 0));
-		loginPanel.add(btnLogin);
+		View_Login.add(btnLogin);
 		
 		JButton btnRegister = new JButton("Registrieren");
-		btnRegister.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 11));
+		btnRegister.setFont(new Font("Times New Roman", Font.PLAIN, 11));
 		btnRegister.setBackground(Color.LIGHT_GRAY);
-		btnRegister.setBorder(new EmptyBorder(0, 0, 0, 0));
 		btnRegister.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
-			
 		});
 		btnRegister.setBounds(244, 169, 120, 23);
-		loginPanel.add(btnRegister);
-	}
-	
-	private void viewRegister() {
-		registerPanel = new JPanel();
-		registerPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(registerPanel);
-		registerPanel.setLayout(null);
-		
-		txtEmail = new JTextField();
-		txtEmail.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 13));
-		txtEmail.setHorizontalAlignment(SwingConstants.LEFT);
-		txtEmail.setBounds(114, 59, 250, 33);
-		txtEmail.setBorder(new EmptyBorder(0, 0, 0, 0));
-		registerPanel.add(txtEmail);
-		txtEmail.setColumns(10);
-		
-		txtPassword = new JPasswordField();
-		txtPassword.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 13));
-		txtPassword.setBounds(114, 128, 250, 30);
-		txtPassword.setBorder(new EmptyBorder(0, 0, 0, 0));
-		registerPanel.add(txtPassword);
-		
-		JLabel lblEmail = new JLabel("E-Mail\r\n");
-		lblEmail.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 13));
-		lblEmail.setHorizontalAlignment(SwingConstants.LEFT);
-		lblEmail.setBounds(114, 34, 190, 23);
-		registerPanel.add(lblEmail);
-		
-		JLabel lblPassword = new JLabel("Passwort");
-		lblPassword.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 13));
-		lblPassword.setBounds(114, 103, 190, 23);
-		registerPanel.add(lblPassword);
-		
-		JButton btnRegister = new JButton("Registrieren");
-		btnRegister.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 11));
-		btnRegister.setBackground(Color.LIGHT_GRAY);
-		btnRegister.setBorder(new EmptyBorder(0, 0, 0, 0));
-		btnRegister.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-			
-		});
-		btnRegister.setBounds(244, 169, 120, 23);
-		registerPanel.add(btnRegister);
-		
-		JButton btnLogin = new JButton("Einloggen");
-		btnLogin.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 11));
-		btnLogin.setBackground(Color.LIGHT_GRAY);
-		btnLogin.setForeground(Color.BLACK);
-		btnLogin.setBounds(114, 169, 120, 23);
-		btnLogin.setBorder(new EmptyBorder(0, 0, 0, 0));
-		registerPanel.add(btnLogin);
-		
+		View_Login.add(btnRegister);
 	}
 }
-
-
