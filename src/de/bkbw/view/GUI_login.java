@@ -15,7 +15,7 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-public class GUI extends JFrame {
+public class GUI_login extends JFrame {
 
 	/**
 	 * 
@@ -33,7 +33,7 @@ public class GUI extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					GUI frame = new GUI();
+					GUI_login frame = new GUI_login();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -45,12 +45,12 @@ public class GUI extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public GUI() {
+	public GUI_login() {
 		setTitle("Ticketverwaltungssystem");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 464, 319);
 		viewLogin();
-		//viewRegister();	
+		viewRegister();	
 	}
 	
 	private void viewLogin() {
