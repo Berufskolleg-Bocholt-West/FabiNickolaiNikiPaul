@@ -3,7 +3,7 @@ package de.bkbw.model;
 import java.util.ArrayList;
 import java.util.UUID;
 
-public class Project {
+public class Project implements Test {
 	
 	public final UUID uuid;
 	public String name;

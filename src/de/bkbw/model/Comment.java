@@ -5,15 +5,13 @@ import java.util.UUID;
 public class Comment {
 
 	private final UUID uuid;
-	public final String user;
-	public final String creationDate;
-	public final String mc;
+	public String user;
+	public String creationDate;
 	
-	public Comment(UUID uuid, String user, String creationDate, String mc) {
+	public Comment(UUID uuid, String user, String creationDate) {
 		this.uuid = uuid;
 		this.user = user;
 		this.creationDate = creationDate;
-		this.mc = mc;
 	}
 	
 	public UUID getUUID() {
